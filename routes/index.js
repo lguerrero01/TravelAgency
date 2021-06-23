@@ -7,10 +7,21 @@ router.get('/', (req, res) => {
   })
 
 router.get('/nosotros', (req, res) => {
-res.render('nosotros');
+    const viajes = 'viajes a Alemania'
+    res.render('nosotros',{
+        viajes
+    });
+
+})
+
+router.get('/inicio', (req, res) => {
+    res.render('inicio',{
+        
+    })
 })
 
 router.get('/contacto', (req, res) => {
-res.send('Hello World!')
+    res.send('Hello World!')
 })
+
 export default router;
