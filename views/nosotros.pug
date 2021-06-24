@@ -1,6 +1,27 @@
 extends ./layout/index
- 
-block  contenido 
-    p  #{viajes}
 
-    img(src="./img/cupon.jpg", alt="imagen")
+block  contenido 
+    main.container.mt-5 
+        .row 
+            .col-md-5 
+                img(src="./img/nosotros.jpg", alt="imagen", class ="img-fluid")
+            .col-md-7
+                h1= pagina 
+                blockquote   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus quam sit amet velit lacinia, in finibus nisl ornare. Ut non lacinia massa, tempor euismod urna. Pellentesque auctor tortor finibus erat tincidunt volutpat. Vivamus interdum ultricies risus, a facilisis ligula bibendum a. Etiam ut dapibus nulla, a malesuada diam. Cras imperdi
+                p Curabitur maximus non velit eu condimentum. Aenean aliquam dapibus consequat. Mauris velit orci, bibendum eu dignissim ac, rhoncus non quam. Nulla aliquet metus interdum purus vulputate, id vestibulum neque tincidunt. Morbi aliquam neque eget quam facilisis, eu blandit felis tempor. Ut semper mauris ac tempus facilisis. Morbi ut lorem pellentesque tellus aliquet sodales. 
+                p tempus nisl nibh. In volutpat consequat gravida. Sed magna justo, tincidunt sit amet sapien eget, scelerisque porttitor ipsum. Pellentesque mattis elementum iaculis. Pellentesque id malesuada dolor. Cras lobortis, lorem molestie consequat blandit, urna ligula aliquet sem, ac volutpat enim velit pulvinar ante. Aliquam sed fringilla ligula, ut viverra augue.
+    .listado-iconos     
+        .container.mt-5.py-5.text-center 
+            .row
+                .col-md-4 
+                    img(src="./img/icono_seguridad.svg", alt="" class='img-fluid mb-4')
+                    h2.mb-4 Seguridad 
+                    p tempus nisl nibh. In volutpat consequat gravida. Sed magna justo, tincidunt sit amet sapien eget, scelerisque porttitor ipsum. Pellentesque mattis elementum iaculis. Pellentesque id malesuada dolor. Cras lobortis, lorem molestie consequat blandit, urna ligula aliquet sem, ac volutpat enim velit pulvinar ante. Aliquam sed fringilla ligula, ut viverra augue.
+                .col-md-4 
+                    img(src="./img/icono_destinos.svg", alt="" class='img-fluid mb-4')
+                    h2.mb-4 Mejores Destinos  
+                    p tempus nisl nibh. In volutpat consequat gravida. Sed magna justo, tincidunt sit amet sapien eget, scelerisque porttitor ipsum. Pellentesque mattis elementum iaculis. Pellentesque id malesuada dolor. Cras lobortis, lorem molestie consequat blandit, urna ligula aliquet sem, ac volutpat enim velit pulvinar ante. Aliquam sed fringilla ligula, ut viverra augue.
+                .col-md-4 
+                    img(src="./img/icono_precio.svg", alt="" class='img-fluid mb-4')
+                    h2.mb-4 Mejores Precios 
+                    p tempus nisl nibh. In volutpat consequat gravida. Sed magna justo, tincidunt sit amet sapien eget, scelerisque porttitor ipsum. Pellentesque mattis elementum iaculis. Pellentesque id malesuada dolor. Cras lobortis, lorem molestie consequat blandit, urna ligula aliquet sem, ac volutpat enim velit pulvinar ante. Aliquam sed fringilla ligula, ut viverra augue.
