@@ -33,6 +33,8 @@ app.get('/', (req, res) => {
 app.use(express.static("public"));
 
 
+//agregar body parser para leer datos del formulario 
+app.use(express.urlencoded({extended: true}));
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

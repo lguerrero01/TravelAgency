@@ -3,21 +3,25 @@ extends ./layout/index
 block  contenido 
     main.container.mt-5 
         h1.text-center.mt-5 #{pagina}
-            .row 
-
+        include ./layout/bloque_testimoniales
+        .row 
+            .col-md-12 
                 h2.d-block.w-100 Agrega Testimonial
-                 
-                 .row.justify-content-center.col
-                    .col-md-8   
-                    form(action="" method="POST")
-                        .form-group
-                            label(for="nombre") Nombre 
-                            input(type="text", placeholder = "Tu nombre", name='nombre', class="form-control")
-                         .form-group
-                            label(for="nombre") Correo 
-                            input(type="text", placeholder = "Tu correo", name='nombre', class="form-control")
-                         .form-group
-                            label(for="nombre") mensaje 
-                            textarea#mensaje(name="", cols="30", rows="4", class="form-control",placeholder ="Tu mensaje")
+                if(errores)
+                    each error in errores 
+                        .alert.col.alert-danger.text-center= error.mensaje
 
-                        input.btn.btn-success.btn-block(type="submit")
+                .row.justify-content-center.col
+                .col-md-8   
+                form(action="" method="POST")
+                    .form-group
+                        label(for="nombre") Nombre 
+                        input(type="text", placeholder = "Tu nombre", name='nombre', class="form-control", value = nombre)
+                        .form-group
+                        label(for="nombre") Correo 
+                        input(type="text", placeholder = "Tu correo", name='nombre', class="form-control", value= correo)
+                        .form-group
+                        label(for="nombre") mensaje 
+                        textarea#mensaje(name="", cols="30", rows="4", class="form-control",placeholder ="Tu mensaje") mensaje
+
+                    input.btn.btn-success.btn-block(type="submit")
