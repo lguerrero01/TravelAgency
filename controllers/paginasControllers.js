@@ -28,9 +28,26 @@ const paginaTestimoniales = (req, res) => {
     });
 }
 
+//muestra viaje por id
+const paginaDetalleViajes = async (req, res) => {
+    const {id} = req.params;
+
+    try {
+        const viaje = await id.findOne({where : { slug: id }});
+        res.render('viaje', {
+            pagina: 'Informacion Viaje',
+            viaje
+        });
+    } catch (error) {
+        console.log(error)
+    }
+   
+}
+
 export {
     paginaInicio, 
     paginaNosotros,
     paginaViajes,
-    paginaTestimoniales
+    paginaTestimoniales,
+    paginaDetalleViajes
 };
